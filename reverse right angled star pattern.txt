@@ -1,0 +1,47 @@
+#include<stdio.h>
+void starpattern(int rows)
+{
+    for(int i=0;i<=rows;i++)
+    {
+        for(int j=0;j<i;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void reversestarpattern(int rows)
+{
+    for(int i=0;i<=rows;i++)
+    {
+        for(int j=0;j<=rows-i-1;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+int main()
+{
+    int rows,type;
+    printf("click the value for 0 printing star and 1 for printing reverse star\n");
+    scanf("%d",&type);
+    switch(type)
+    {
+        case 0:
+        printf("enter the number for how many times of printing a star pattern\n");
+        scanf("%d",&rows);
+        starpattern(rows);
+        break;
+        case 1:
+        printf("enter the number for how many times of printing a reverse star pattern\n");
+        scanf("%d",&rows);
+        reversestarpattern(rows);
+        break;
+        default:
+        printf("this is invalid number");
+    }
+    return 0;
+}
+
